@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeAtap — Kampanye Konten 30 Hari | Niche: Keluarga</title>
+<style>
+  :root{
+    --ink:#1b1b1f;
+    --soft:#5c5c66;
+    --line:#e2e0da;
+    --accent:#ff6b4a;
+    --accent-soft:#fff1ed;
+    --teal:#0f7b6c;
+    --teal-soft:#eaf6f3;
+    --bg:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#f4f2ee;
+    color:var(--ink);
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    font-size:11.2pt;
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    background:var(--bg);
+    padding:34px 44px 60px;
+    box-shadow:0 2px 24px rgba(0,0,0,.08);
+  }
+  h1,h2,h3,h4{margin:0 0 .4em;line-height:1.25;}
+  h1{font-size:26pt;letter-spacing:-.5px;}
+  h2{font-size:15.5pt;margin-top:1.6em;padding-bottom:6px;border-bottom:2px solid var(--accent);}
+  h3{font-size:12.5pt;}
+  p{margin:0 0 .7em;}
+  ul,ol{margin:0 0 .7em;padding-left:1.35em;}
+  li{margin-bottom:.28em;}
+  a{color:var(--teal);}
+  code{font-family:"Consolas",monospace;font-size:.9em;background:#f1efea;padding:1px 4px;border-radius:3px;}
+
+  /* ---------- PRINT BUTTON ---------- */
+  .printbar{
+    position:sticky;top:0;z-index:50;
+    background:#1b1b1f;color:#fff;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+    padding:10px 16px;font-size:10.5pt;
+  }
+  .printbar button{
+    background:var(--accent);color:#fff;border:0;border-radius:6px;
+    padding:8px 16px;font-weight:700;font-size:10.5pt;cursor:pointer;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    border:3px solid var(--ink);
+    border-radius:14px;
+    padding:34px 32px;
+    margin-bottom:26px;
+  }
+  .kicker{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-weight:800;font-size:9.5pt;letter-spacing:1.4px;text-transform:uppercase;
+    padding:5px 12px;border-radius:99px;margin-bottom:16px;
+  }
+  .cover .big{font-size:27pt;font-weight:800;line-height:1.15;letter-spacing:-.6px;margin-bottom:10px;}
+  .cover .sub{font-size:12.5pt;color:var(--soft);margin-bottom:22px;}
+  .meta{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;
+    border-top:1px solid var(--line);padding-top:18px;
+  }
+  .meta div{font-size:10.5pt;}
+  .meta b{display:block;font-size:9pt;letter-spacing:.9px;text-transform:uppercase;color:var(--soft);font-weight:700;}
+
+  /* ---------- TABLES ---------- */
+  table{width:100%;border-collapse:collapse;margin:.4em 0 1.1em;font-size:10.3pt;}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top;}
+  th{background:#f7f5f1;font-size:9.4pt;letter-spacing:.5px;text-transform:uppercase;}
+
+  /* ---------- WEEK DIVIDER ---------- */
+  .week{
+    break-before:page;page-break-before:always;
+    margin:0 0 8px;padding:26px 24px;border-radius:12px;
+    background:var(--teal-soft);border-left:6px solid var(--teal);
+  }
+  .week .wlabel{font-size:9.5pt;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);}
+  .week h2{border:0;margin:.15em 0 .3em;font-size:19pt;padding:0;}
+  .week p{margin:0;color:#2b4f49;font-size:11pt;}
+
+  /* ---------- DAY CARD ---------- */
+  .day{
+    break-before:page;page-break-before:always;
+    break-inside:avoid;page-break-inside:avoid;
+  }
+  .day:first-of-type{break-before:auto;page-break-before:auto;}
+  .dayhead{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    border-bottom:2px solid var(--line);padding-bottom:9px;margin-bottom:13px;
+  }
+  .daynum{
+    background:var(--ink);color:#fff;font-weight:800;font-size:11pt;
+    padding:5px 11px;border-radius:8px;letter-spacing:.5px;white-space:nowrap;
+  }
+  .daytitle{font-size:13.5pt;font-weight:800;flex:1 1 auto;}
+  .badge{
+    font-size:8.6pt;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
+    padding:4px 9px;border-radius:99px;white-space:nowrap;
+  }
+  .b-reels{background:var(--accent);color:#fff;}
+  .b-feed{background:#3d5a80;color:#fff;}
+  .b-story{background:#e6e3dd;color:#3a3a40;}
+  .b-pillar{background:var(--teal-soft);color:var(--teal);border:1px solid #bfe3da;}
+
+  .field{margin-bottom:9px;}
+  .field .lbl{
+    display:block;font-size:8.8pt;font-weight:800;letter-spacing:1px;
+    text-transform:uppercase;color:var(--accent);margin-bottom:2px;
+  }
+  .field.hook .lbl{color:#b8860b;}
+  .field.cta .lbl{color:var(--teal);}
+  .quote{
+    background:#fffaf0;border-left:3px solid #e6c56b;
+    padding:8px 12px;border-radius:0 6px 6px 0;font-style:italic;
+  }
+  .cap{
+    background:#f7f5f1;border-left:3px solid var(--line);
+    padding:8px 12px;border-radius:0 6px 6px 0;
+  }
+  .script{
+    background:var(--teal-soft);border-radius:8px;padding:11px 14px 6px;margin-bottom:10px;
+  }
+  .script .lbl{
+    display:block;font-size:8.8pt;font-weight:800;letter-spacing:1px;
+    text-transform:uppercase;color:var(--teal);margin-bottom:5px;
+  }
+  .script ol{margin-bottom:6px;}
+  .script li{font-size:10.4pt;}
+  .script li b{color:var(--teal);}
+  .subblock{
+    border:1px dashed var(--line);border-radius:8px;
+    padding:9px 13px;margin-top:12px;font-size:10.3pt;
+  }
+  .subblock .lbl{
+    display:block;font-size:8.6pt;font-weight:800;letter-spacing:1px;
+    text-transform:uppercase;color:#3d5a80;margin-bottom:4px;
+  }
+  .subblock h4{font-size:11pt;margin-bottom:5px;}
+
+  .tipbox{
+    background:#fff8f5;border:1px solid #ffd6c9;border-radius:10px;
+    padding:13px 16px;margin:0 0 12px;
+  }
+  .tipbox h3{margin-bottom:6px;font-size:11.5pt;}
+  .footer{
+    margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:9.6pt;color:var(--soft);text-align:center;
+  }
+  .hadith{font-size:10pt;color:var(--soft);font-style:italic;}
+
+  /* ---------- PAGE SETUP ---------- */
+  @page{size:A4;margin:14mm 13mm 16mm;}
+  @media print{
+    body{background:#fff;font-size:10.4pt;}
+    .no-print{display:none !important;}
+    .sheet{max-width:none;margin:0;padding:0;box-shadow:none;}
+    h2{-webkit-print-color-adjust:exact;}
+    .week,.cover,.script,.subblock,.tipbox,.dayhead,th,td{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="printbar no-print">
+  <span><b>SeAtap — Kampanye Konten 30 Hari</b> · Niche: Keluarga · Soft Selling</span>
+  <button onclick="window.print()">⬇ Simpan sebagai PDF</button>
+</div>
+
+<div class="sheet">
+
+  <!-- ================= COVER ================= -->
+  <div class="cover">
+    <span class="kicker">Rencana Konten 30 Hari</span>
+    <div class="big">SEBULAN SEATAP<br>Rumah Kami Nggak Sempurna,<br>Tapi Satu Tim</div>
+    <div class="sub">Kampanye soft selling aplikasi manajemen keluarga <b>SeAtap</b><br>
+    Niche: Keluarga · Format: Instagram Reels, Feed &amp; Stories</div>
+    <div class="meta">
+      <div><b>Tujuan</b>Memperkenalkan SeAtap tanpa hard selling — bangun relate dulu, jualan belakangan.</div>
+      <div><b>Target Audiens</b>Orang tua muda 25–40 th, ibu/papa yang urus rumah sambil kerja, keluarga yang tinggal serumah 3 generasi.</div>
+      <div><b>Rasio Konten</b>80% value &amp; emosi : 20% produk</div>
+      <div><b>Durasi</b>30 hari · 30 Reels (1/hari) · 12 Feed (3/minggu) · Stories 3–5 frame/hari</div>
+    </div>
+  </div>
+
+  <p class="hadith">Catatan: seluruh konsep ini dirancang supaya bisa dieksekusi content creator pemula — cukup 1 rumah, 1 set pemain, dan HP.</p>
+
+  <!-- ================= BAGIAN 1 ================= -->
+  <h2>1 · Ide Besar Kampanye</h2>
+
+  <p><b>Konsep:</b> bukan jualan aplikasi, tapi <b>mini-series dokumenter</b> tentang satu keluarga fiktif bernama <b>Keluarga Satu Atap</b>. Setiap hari kita posting satu episode kecil dari rumah ini. Audiens diajak ngikutin 30 hari hidup mereka — chaos-nya, capeknya, lucunya, dan momen kecil yang bikin <i>"oh iya ya, gue juga ngalamin"</i>.</p>
+
+  <table>
+    <tr><th style="width:24%">Karakter</th><th style="width:14%">Peran</th><th>Sifat yang relatable</th></tr>
+    <tr><td><b>Sari (32)</b></td><td>Mama, WFH</td><td>Capek tapi nggak pernah ngeluh, jadi "pusat informasi rumah"</td></tr>
+    <tr><td><b>Ardan (35)</b></td><td>Papa, kerja kantor</td><td>Suka jawab "iya" tanpa nyimpen info</td></tr>
+    <tr><td><b>Kayla (8)</b></td><td>Anak pertama</td><td>Drama, moody, tapi peka</td></tr>
+    <tr><td><b>Bima (4)</b></td><td>Anak kedua</td><td>Energi unlimited, tukang bikin chaos</td></tr>
+    <tr><td><b>Mbah Uti (60)</b></td><td>Ibu Sari, serumah</td><td>Komentator hidup, tukang nyuruh makan</td></tr>
+  </table>
+
+  <p><b>Kunci soft selling:</b> SeAtap <b>tidak dijelaskan</b> di 80% konten. Aplikasinya cuma <b>kelihatan natural</b> — Sari buka HP dan lihat catatan belanja, Ardan ngecek jadwal, anak nulis tugas. Produk muncul sebagai solusi yang nggak diomongin, bukan pitch. Audiens yang penasaran akan nanya sendiri: <i>"itu aplikasi apa, kak?"</i> — di situ kita jawab di komentar yang di-pin.</p>
+
+  <div class="tipbox">
+    <h3>Kalimat &amp; aset kunci</h3>
+    <p style="margin:0"><b>Tagline:</b> "Rumah nggak harus rapi. Yang penting semua tahu."<br>
+    <b>Hashtag:</b> #SebulanSeatap &nbsp;#SatuAtapSatuTim &nbsp;#KeluargaSeAtap</p>
+  </div>
+
+  <!-- ================= BAGIAN 2 ================= -->
+  <h2 style="break-before:page;page-break-before:always;">2 · Strategi Pembagian Konten</h2>
+
+  <h3>Pilar konten &amp; porsinya</h3>
+  <table>
+    <tr><th style="width:30%">Pilar</th><th style="width:11%">Porsi</th><th>Fungsi</th><th style="width:20%">Frekuensi</th></tr>
+    <tr><td><b>1. Relatable Chaos</b><br><span style="font-size:9.5pt;color:#5c5c66">komedi rumah tangga</span></td><td>35%</td><td>Bikin relate, viral-able, datengin follower baru</td><td>± 11 Reels</td></tr>
+    <tr><td><b>2. Edukasi Rumah Tangga</b></td><td>25%</td><td>Bikin akun dianggap berguna → banyak disimpan</td><td>± 8 Reels + feed</td></tr>
+    <tr><td><b>3. Emosi &amp; Storytelling</b></td><td>20%</td><td>Bangun ikatan emosional, share-able</td><td>± 6 Reels + feed</td></tr>
+    <tr><td><b>4. Interaksi &amp; Komunitas</b></td><td>10%</td><td>Naikin engagement &amp; jumlah komentar</td><td>Q&amp;A, poll, reply</td></tr>
+    <tr><td><b>5. Soft-Product</b><br><span style="font-size:9.5pt;color:#5c5c66">show, don't sell</span></td><td>10%</td><td>Perkenalkan SeAtap tanpa kesan jualan</td><td>± 3 Reels + 1 feed</td></tr>
+  </table>
+
+  <h3>Frekuensi posting (realistis)</h3>
+  <ul>
+    <li><b>Reels: 1×/hari</b> — jam <b>18.00–20.00 WIB</b> (jam pulang kerja, keluarga pada scroll).</li>
+    <li><b>Feed: 3×/minggu</b> — <b>Senin · Kamis · Minggu</b>, total <b>12 postingan</b>.
+      <ul>
+        <li>Senin = edukasi / infografis (saved-worthy)</li>
+        <li>Kamis = carousel cerita / checklist</li>
+        <li>Minggu = recap + Q&amp;A (ajak ngobrol)</li>
+      </ul>
+    </li>
+    <li><b>Stories: 3–5 frame/hari</b> — pagi (frame ringan), siang (BTS), malam (ajak interaksi lewat poll/question).</li>
+    <li>Jam posting feed: <b>12.00</b> (jam istirahat) atau <b>19.00</b>.</li>
+  </ul>
+
+  <h3>Alur 30 hari (biar ada progres, nggak monoton)</h3>
+  <table>
+    <tr><th style="width:22%">Minggu</th><th style="width:44%">Tema</th><th>Tujuan</th></tr>
+    <tr><td><b>1 (H1–7)</b></td><td>Kenalan Sama Chaos — pagi kacau, barang hilang, siapa piket apa</td><td>Bangun karakter &amp; bikin orang relate</td></tr>
+    <tr><td><b>2 (H8–14)</b></td><td>Rutinitas Nggak Harus Berat — jadwal bentrok, uang bulanan, checklist</td><td>Mulai kasih edukasi praktis</td></tr>
+    <tr><td><b>3 (H15–21)</b></td><td>Saat Rumah Diuji — anak sakit, capek nyimpan sendiri, komunikasi</td><td>Kedalaman emosi, bikin orang share</td></tr>
+    <tr><td><b>4 (H22–30)</b></td><td>Rumah yang Lebih Ringan — kebiasaan baru, delegasi, recap</td><td>Resolusi + soft product + teaser season 2</td></tr>
+  </table>
+
+  <p><b>Aturan tone:</b> kalimat pendek, hindari jargon fitur. Nama SeAtap disebut maksimal <b>3–4× dalam 30 hari</b>. Lebih baik audiens yang nanya "ini app apa?" daripada kita yang ngomong duluan.</p>
+
+  <!-- ================= BAGIAN 3 ================= -->
+  <h2>3 · Kalender Konten 30 Hari</h2>
+  <p>Setiap hari wajib ada <b>1 Reels</b> (lengkap dengan script + gambaran visual). Feed dan Stories mengikuti jadwal Minggu/Senin/Kamis dan setiap hari. Minggu 1 Feed jatuh di H2, H4, H7 dst.</p>
+
+  <!-- ========== MINGGU 1 ========== -->
+  <div class="week">
+    <div class="wlabel">Minggu 1 · Hari 1–7</div>
+    <h2>Kenalan Sama Chaos</h2>
+    <p>Tujuan: memperkenalkan 5 karakter dan masalah sehari-hari yang bikin audiens bilang "ini gue banget".</p>
+  </div>
+
+  <!-- HARI 1 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 1</span>
+      <span class="daytitle">Pagi Pertama di Rumah Satu Atap</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Jam 6 pagi di rumah ini. Semua bangun, tapi nggak ada yang tahu sepatunya di mana."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Montase chaos pagi: Bima nangis, Kayla nyari buku, Sari nyari surat izin, Ardan udah klakson di mobil. Ditutup: semua akhirnya berangkat, rumah tinggal berantakan.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Close-up alarm HP bunyi. Teks di layar: "06.00"</li>
+        <li><b>3–8s</b> — Kamera geser: Bima nangis "SEPATU KUUU" (slow-mo)</li>
+        <li><b>8–13s</b> — Sari bongkar lemari: "Surat izin... surat izin..."</li>
+        <li><b>13–19s</b> — Ardan di mobil: "Kita berangkat jam berapa sih ini?"</li>
+        <li><b>19–25s</b> — Semua udah di mobil, rumah berantakan. Teks: "Tapi kita berhasil. Seperti biasa."</li>
+        <li><b>25–28s</b> — Logo SeAtap kecil di pojok + #SebulanSeatap</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 rumah, HP di tripod/selfie, subtitle besar di layar, audio komedi panik yang lagi tren, sedikit slow-mo di akhir. Semua adegan bisa diambil dalam 1 ruangan.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Siapa yang paginya kayak gini juga? 😅 Rumah gue nggak pernah rapi jam 6 pagi. Hari ini gue mulai catat 30 hari hidup di satu atap — ketemu tiap hari ya!</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "PAGI" kalau rumah lu juga begini, terus follow biar nggak ketinggalan 30 harinya.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto rumah masih gelap + teks "Hari 1 dari 30" · 2) Poll "Pagi lu: tenang 🧘 / chaos 😵" · 3) BTS syuting · 4) Question sticker "Apa yang paling sering ilang di rumah lu?"
+    </div>
+  </div>
+
+  <!-- HARI 2 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 2</span>
+      <span class="daytitle">Barangnya Ada, Tapi Nggak Ada yang Tahu di Mana</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Rumah gue punya sabun. Tapi secara teknis, gue nggak punya sabun."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Komedi sketsa: semua orang nyari barang yang sebenarnya ada — sabun, galon, charger, gunting kuku. Ditutup dengan "rumah nggak butuh lebih banyak barang, butuh catatan".</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Sari: "Ada sabun nggak?" Ardan: "Ada."</li>
+        <li><b>3–8s</b> — Sari: "Di mana?" Ardan: "Nah itu dia."</li>
+        <li><b>8–14s</b> — Cut ke Kayla buka-buka lemari, cut ke Mbah Uti: "Dulu zaman saya nggak gini."</li>
+        <li><b>14–20s</b> — Cut ke Sari akhirnya beli sabun baru, padahal di rumah ada 3.</li>
+        <li><b>20–24s</b> — Teks: "Rumah nggak butuh lebih banyak barang. Butuh catatan." + shot singkat Sari nyatet di HP.</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 kamera statis di dapur, dialog singkat, sound effect "record scratch" tiap ganti orang.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Kalau rumah lu punya "sabun hantu" kayak gue, kita sama 😂</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen barang apa yang paling sering "hilang" di rumah lu.</p></div>
+    <div class="subblock"><span class="lbl">Feed 1 · Carousel 6 slide</span>
+      <h4>Kenalan Sama Keluarga Satu Atap</h4>
+      Slide 1: "Rumah kecil. 5 orang. 1 kamar mandi. Selamat datang." · Slide 2–5: 1 karakter/slide + satu kalimat jujur tiap orang · Slide 6: "30 hari ke depan, kita bakal ngikutin rumah ini. Nggak sempurna, tapi satu tim."<br><br>
+      <b>Caption:</b> Nggak ada keluarga yang rapi 100%. Punya gue juga nggak. Tapi kami belajar pelan-pelan biar semua tahu, semua kebagian. Follow kalau lu mau ikut. 🤍<br>
+      <b>CTA:</b> Simpan postingan ini biar lu bisa cocokin karakter kami sama keluarga lu.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      Perkenalan tiap karakter pakai foto + sticker poll "Lu paling mirip siapa?"
+    </div>
+  </div>
+
+  <!-- HARI 3 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 3</span>
+      <span class="daytitle">Papa Cuma Dengar "Iya"</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Suami gue selalu jawab 'iya'. Sayangnya iya-nya itu nggak masuk ke memori."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sketsa: Ardan jawab "iya" tanpa dengerin → salah tanggal → anak kecewa. Ditutup: satu jadwal untuk semua orang.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Sari: "Kamis ya, pentas Kayla jam 9." Ardan (nunduk HP): "Iya iya."</li>
+        <li><b>3–9s</b> — Time-lapse → Kamis jam 9, Ardan di kantor, telepon dari Sari.</li>
+        <li><b>9–15s</b> — Kayla nangis di panggung: "Papa bilang mau dateng..."</li>
+        <li><b>15–21s</b> — Ardan di mobil, muka bersalah. Teks: "Bukan nggak sayang. Cuma nggak nyatet."</li>
+        <li><b>21–26s</b> — Sari buka HP, layar jadwal, klik → masuk ke jadwal Ardan. Teks: "Sekarang satu jadwal, semua tahu."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kamera statis di meja kerja, panggung pakai ruang tamu + lampu HP. Simpel, tanpa alat tambahan.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Ini bukan soal papa jahat. Ini soal info yang cuma disimpen di kepala ibu. 💔</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tag pasangan lu dan tanya: "jadwal pentas anak tanggal berapa?" 😌</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) BTS "adegan nangis pakai bawang 😂" · 2) Poll "Di rumah lu jadwal disimpen di mana? Kepala ibu / HP / kalender dinding" · 3) Link jadwal keluarga versi printable · 4) Teaser hari besok.
+    </div>
+  </div>
+
+  <!-- HARI 4 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 4</span>
+      <span class="daytitle">Capek yang Nggak Kelihatan</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Kalau lu ngerasa capek tapi nggak ada yang bisa ditunjuk sebagai penyebabnya — ini alasannya."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Voice-over Sari soal <i>mental load</i>: nginget tugas, tanggal, stok, perasaan orang lain — bukan kerja fisik, tapi bikin habis.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari duduk, diem, layar HP mati. Teks: "Capek, tapi kalau ditanya kenapa, gue bingung jawabnya."</li>
+        <li><b>4–12s</b> — VO: "Yang bikin capek bukan nyuci baju. Tapi nginget baju siapa yang udah mau abis."</li>
+        <li><b>12–20s</b> — Montase cepat: bayar listrik, tanda tangan buku, ingetin vitamin, cari seragam.</li>
+        <li><b>20–26s</b> — Teks: "Otak kita kayak task manager yang nggak pernah diclose."</li>
+        <li><b>26–32s</b> — Sari tarik napas, buka HP, bagi tugas ke anggota keluarga. Teks: "Beban jadi ringan kalau dibagi, bukan cuma diinget."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 kursi, cahaya sore dari jendela, VO direkam pakai HP (suara natural), b-roll pendek-pendek. Tidak perlu editing rumit.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Nggak semua capek bisa dijelasin. Tapi semua capek bisa dikurangi — mulai dari bagi tugas. 😮‍💨</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "🤍" kalau lu pernah ngerasain ini tanpa bisa jelasin.</p></div>
+    <div class="subblock"><span class="lbl">Feed 2 · Single infografis</span>
+      <h4>Mental Load Itu Apa?</h4>
+      Definisi singkat + 4 contoh + 3 cara mengurangi (tulis, bagi tugas, bikin bisa diakses semua orang).<br>
+      <b>Caption:</b> Simpen ini buat pasangan lu. Serius.<br>
+      <b>CTA:</b> Share ke story kalau ini relate.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Slide teks quote mental load · 2) Quiz "Ini mental load atau bukan?" · 3) Screenshot komentar follower · 4) "Besok ada tips bagi tugas".
+    </div>
+  </div>
+
+  <!-- HARI 5 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 5</span>
+      <span class="daytitle">Mbah Uti vs Resep Modern</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Resep: 200 gram tepung. Mbah Uti: 'ya pokoknya segitu'."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Komedi beda generasi: Mbah Uti masak pakai feeling, Sari pakai takaran. Ujungnya dua-duanya enak — dan resep Mbah jadi satu-satunya yang dicatat.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Sari scroll resep. Mbah Uti masuk: "Ngapain baca-baca, dulu Mbah masak ya gitu aja."</li>
+        <li><b>3–8s</b> — Mbah Uti masukin bahan pakai centong sambil nyanyi.</li>
+        <li><b>8–14s</b> — Sari: "Mbah, ini harus dikira-kira berapa?" Mbah: "Sampai kelihatan cantik."</li>
+        <li><b>14–20s</b> — Hasilnya: kue Mbah lebih enak, semua keluarga rebutan.</li>
+        <li><b>20–25s</b> — Teks: "Nggak semua harus dicatat. Tapi resep Mbah... ini satu-satunya yang kami catat." + Sari nulis resep di HP.</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Dapur, 2 pemain, suara natural + musik akustik ringan. Bikin 1 kue beneran biar bisa dimakan setelah syuting 😄</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Ada nggak Mbah-nya di rumah lu? Jangan lupa minta resepnya, ya. 🙏</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Comment resep keluarga lu yang paling legendaris.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto proses bikin kue · 2) "Kata Mbah Uti hari ini" — quote card · 3) Poll "Masak pakai feeling / takaran?" · 4) Repost komentar favorit.
+    </div>
+  </div>
+
+  <!-- HARI 6 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 6</span>
+      <span class="daytitle">Belanja Bulanan Tanpa Daftar = Petualangan</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Masuk toko buat beli 3 barang. Pulang bawa 13 barang. Uang jatah seminggu hilang."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>POV super cepat: Sari belanja tanpa list, sambil "eh ini juga butuh kayaknya". Ujungnya minyak goreng kelupaan.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Teks di layar: "Misi: beli sabun. Yang lain bohong."</li>
+        <li><b>3–8s</b> — Cut cepat: masuk toko → ambil snack "buat anak" → ambil tisu → ambil saus → total makin naik.</li>
+        <li><b>8–14s</b> — Di kasir: "Bu, totalnya 480."</li>
+        <li><b>14–20s</b> — Di mobil: Sari ngecek kantong, sadar minyak goreng kelupaan.</li>
+        <li><b>20–25s</b> — Teks: "Bukan boros. Cuma nggak ada catatannya." + shot Sari ngecek list di HP.</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 lokasi minimarket + 1 mobil, fast cut, pakai audio komedi yang lagi trending.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Boros itu bukan masalah uangnya, tapi masalah nggak ada catatannya. 😭</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tulis di komen: barang yang SELALU kelupaan di rumah lu.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto struk belanja · 2) "Cek 3 barang yang paling sering kelupaan" · 3) Poll "Belanja: ada list / hajar aja" · 4) Teaser besok (malam minggu keluarga).
+    </div>
+  </div>
+
+  <!-- HARI 7 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 7</span>
+      <span class="daytitle">Nggak Ada yang Salah, Tapi Semua Capek</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Rumah kami nggak lagi berantem. Cuma... semua orang diam."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Reels emosional: potongan 6 hari chaos, ditutup refleksi — masalahnya bukan siapa yang salah, tapi sistem rumah yang nggak kebagi.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Montase cepat klip Hari 1–6 (masing-masing ± 2 detik).</li>
+        <li><b>4–10s</b> — Night shot: Sari &amp; Ardan duduk di sofa, nggak ada yang ngomong.</li>
+        <li><b>10–16s</b> — Sari: "Kita nggak marahin satu sama lain, ya? Kita cuma capek berdua."</li>
+        <li><b>16–22s</b> — Ardan ngangguk, ambil HP: "Besok kita bagi. Beneran dibagi."</li>
+        <li><b>22–28s</b> — Teks: "Minggu 1 selesai. Rumah kami masih kacau. Tapi sekarang kami sadar."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Tone hangat (lampu kuning), tanpa musik → pakai ambient rumah + VO lembut. Ending fade ke logo kecil.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Minggu pertama ngajarin kami satu hal: capek nggak perlu ada yang disalahin, tapi perlu diselesaiin bareng.</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Coba inget, kapan terakhir kali rumah lu ngobrolin beban tanpa nyari siapa yang salah?</p></div>
+    <div class="subblock"><span class="lbl">Feed 3 · Carousel recap</span>
+      <h4>Recap Minggu 1: 3 Hal yang Bikin Rumah Kacau</h4>
+      Slide: 1) Info cuma di satu kepala · 2) Barang nggak ada catatan · 3) Belanja tanpa list → slide terakhir: "Minggu depan: cara benerinnya."<br>
+      <b>Caption:</b> Simpen ini dulu. Minggu depan gue bagi cara benerinnya satu-satu.<br>
+      <b>CTA:</b> Komen pilar mana yang paling kena di rumah lu: 1, 2, atau 3?
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      Recap minggu 1 · quiz "tebak episode favorit" · poll "lanjut 3 minggu lagi?" · BTS · question sticker buat konten minggu 2.
+    </div>
+  </div>
+
+  <!-- ========== MINGGU 2 ========== -->
+  <div class="week">
+    <div class="wlabel">Minggu 2 · Hari 8–14</div>
+    <h2>Rutinitas Nggak Harus Berat</h2>
+    <p>Tujuan: mulai kasih solusi praktis &amp; edukatif supaya akun dianggap berguna dan banyak disimpan.</p>
+  </div>
+
+  <!-- HARI 8 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 8</span>
+      <span class="daytitle">10 Menit yang Ngerapiin Seharian</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Rahasia rumah yang nggak panik pagi bukan bangun lebih pagi. Tapi ngobrol 10 menit malamnya."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Tips: 10 menit sebelum tidur, semua orang share 3 hal — besok ngapain, siapa butuh apa, apa yang kurang di rumah.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Hook langsung to-camera.</li>
+        <li><b>4–12s</b> — Tips 1: "Semua orang nyebut agenda besok." (visual: anak nyebut piket, papa nyebut meeting)</li>
+        <li><b>12–20s</b> — Tips 2: "Sebut 1 barang yang besok dibutuhin." (visual: Bima "biskuit!" semua ketawa)</li>
+        <li><b>20–28s</b> — Tips 3: "Sebut 1 hal yang bikin hari ini berat." (visual: Sari diem, Ardan merhatiin)</li>
+        <li><b>28–34s</b> — Teks akhir: "10 menit. Nggak ada aplikasi, nggak ada alat. Cuma 10 menit."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Ruang keluarga malam, 1 kamera, subtitle besar. Format to-camera + cut b-roll singkat.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Coba 7 hari. Rumah lu bakal kerasa lebih "kenal" satu sama lain. 🌙</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Simpen video ini, terus komen "done" kalau lu udah coba malam ini.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Checklist 10 menit versi teks · 2) Poll "Berapa menit ngobrol keluarga lu per hari?" · 3) BTS anak-anak · 4) Countdown "Hari 8 dari 30 ✅"
+    </div>
+  </div>
+
+  <!-- HARI 9 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 9</span>
+      <span class="daytitle">Papa: "Besok Kita Ngapain?"</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Pertanyaan paling bikin mama menarik napas panjang."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Komedi: Papa ngajak jalan tapi semua info ada di kepala mama. Ditutup: rumah tenang kalau semua bisa jawab sendiri pertanyaannya.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–3s</b> — Ardan: "Besok weekend, kita ngapain?" Sari tarik napas → freeze frame. Teks: "cut. take 2."</li>
+        <li><b>3–9s</b> — Sari: "Nanti gue kasih tau ya, sekarang gue juga lagi ngecek."</li>
+        <li><b>9–15s</b> — Fast montage: Sari mikir siapa nggak ada kegiatan, siapa harus kerjain PR, siapa butuh sepatu baru.</li>
+        <li><b>15–21s</b> — Sari: "Ada di catatan. Lu bisa liat sendiri kok." Ardan jadi bisa jawab sendiri.</li>
+        <li><b>21–26s</b> — Teks: "Rumah tenang kalau semua bisa jawab sendiri pertanyaannya."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Ruang keluarga, 2 orang duduk, punch-in close-up untuk reaksi.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Kalau satu orang jadi "Google-nya keluarga", dia capek. Bikin semuanya bisa cek sendiri. 📱</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tag seseorang yang selalu jadi "Google-nya keluarga" 😂</p></div>
+    <div class="subblock"><span class="lbl">Feed 4 · Single infografis</span>
+      <h4>4 Info Keluarga yang Wajib Bisa Diakses Semua Orang</h4>
+      1) Jadwal &amp; agenda · 2) Uang masuk-keluar · 3) Stok &amp; kebutuhan rumah · 4) Tugas &amp; piket.<br>
+      <b>Caption:</b> Nggak perlu aplikasi mahal. Yang penting: bisa dilihat semua orang, bukan cuma diinget satu orang.<br>
+      <b>CTA:</b> Simpen, lalu tempel di chat keluarga 😉
+    </div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Screenshot infografis · 2) Quiz "Info mana yang paling nggak keurus di rumah lu?" · 3) Tips cepat · 4) Repost jawaban follower.
+    </div>
+  </div>
+
+  <!-- HARI 10 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 10</span>
+      <span class="daytitle">Rapat Jam 9 vs Pentas Jam 9</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Semua jadwal keluarga sebenarnya diatur sama satu orang. Sampai akhirnya bentrok."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Bentrok jadwal: Ardan harus rapat, Kayla harus pentas, Bima ada vaksin — semua di hari yang sama. Diselesaikan dengan hal sederhana: semua kelihatan di satu tempat.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — 3 teks muncul bertumpuk di layar: "Rapat 9.00", "Pentas 9.00", "Vaksin 9.00".</li>
+        <li><b>4–10s</b> — Sari duduk diem, muka datar. Teks: "Kepala gue loading."</li>
+        <li><b>10–17s</b> — Cut telepon: Sari minta Mbah dateng, Ardan minta ganti jadwal rapat.</li>
+        <li><b>17–23s</b> — Sari bikin catatan di HP, tanda 3 warna berbeda.</li>
+        <li><b>23–28s</b> — Teks: "Selesai. Bukan karena gue hebat, tapi karena semuanya keliatan di satu tempat."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Meja makan + pencahayaan alami. Cut cepat dengan sound effect "ding" tiap jadwal muncul.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Ada nggak minggu yang semua acara numpuk di hari yang sama? 🙃</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "NUMPUK" kalau minggu lu kayak gini.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto kalender ramai · 2) Poll "Jadwal keluarga lu: satu tempat / tercerai-berai" · 3) Tips prioritas · 4) Teaser besok.
+    </div>
+  </div>
+
+  <!-- HARI 11 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 11</span>
+      <span class="daytitle">Cara Bikin Kesepakatan Rumah Tanpa Ribut</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Nggak usah rapat keluarga. Cukup 3 langkah ini."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>3 langkah: (1) tulis semua tugas yang ada, (2) bagi sesuai waktu yang realistis, (3) sepakati waktu review mingguan.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Hook to-camera.</li>
+        <li><b>4–11s</b> — Langkah 1: tunjukin daftar tugas nempel di pintu kulkas.</li>
+        <li><b>11–18s</b> — Langkah 2: dua orang ambil 2 sticky note masing-masing.</li>
+        <li><b>18–24s</b> — Langkah 3: teks "Review tiap minggu, 5 menit aja."</li>
+        <li><b>24–28s</b> — Closing: "Yang penting bukan pembagiannya sempurna. Yang penting ada yang bisa dilihat semua."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Sticky note warna, 1 meja, angle top-down. Gratis dan gampang banget.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Pembagian tugas gagal bukan karena malas — biasanya karena nggak ada yang keliatan. 📝</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Simpen + komen "MINGGU INI" kalau mau gue kirim template-nya.</p></div>
+    <div class="subblock"><span class="lbl">Feed 5 · Carousel</span>
+      <h4>Checklist Bulanan Keluarga (Versi Kami)</h4>
+      Keuangan · dapur &amp; stok · anak &amp; sekolah · rumah &amp; kebersihan · kesehatan · momen bersama.<br>
+      <b>Caption:</b> Ini yang kami pakai tiap awal bulan. Simpen biar nggak bingung lagi mau ngapain.<br>
+      <b>CTA:</b> Komen "CHECKLIST" kalau lu mau versi siap-printnya.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      1) Carousel preview · 2) Poll "lu tim checklist atau tim spontan?" · 3) BTS nulis sticky note · 4) Repost 3 komen · 5) "Besok: versi anak-anak".
+    </div>
+  </div>
+
+  <!-- HARI 12 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 12</span>
+      <span class="daytitle">Piket Versi Anak-Anak</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Edukasi (fun)</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Anak umur 8 tahun nggak bisa nyuci baju. Tapi bisa banget bikin rumah nggak kacau."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Kayla &amp; Bima bikin kesepakatan tugas versi mereka — hasilnya lucu tapi logis, dan malah merek yang paling semangat jalanin.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Kayla to-camera: "Aku bikin peraturan rumah."</li>
+        <li><b>4–10s</b> — Tulis di kertas: "Bima: sepatu masuk rak." Bima: "Kalau lupa?" Kayla: "Nggak dapet stiker."</li>
+        <li><b>10–16s</b> — Cut ke pelaksanaan: Bima naruh sepatu sendiri, jalan sok jago.</li>
+        <li><b>16–22s</b> — Cut ke reward chart warna-warni di dinding.</li>
+        <li><b>22–26s</b> — Teks: "Anak seneng kalau aturannya jelas &amp; keliatan. Sama kayak orang dewasa."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kamera dari ketinggian anak (angle rendah), warna cerah, musik ceria.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Nggak nyangka, yang paling semangat nerapin tugas itu anak umur 4 tahun. 🥹</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen umur anak lu — nanti gue kasih ide tugas yang cocok.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto reward chart · 2) Quiz "tugas anak 4 tahun apa?" · 3) Video pendek Bima naruh sepatu · 4) Question sticker "anak lu tugasnya apa?"
+    </div>
+  </div>
+
+  <!-- HARI 13 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 13</span>
+      <span class="daytitle">Uang Bulanan Kok Habis Tanggal 15?</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Bukan karena boros. Karena nggak ada yang tahu ke mana perginya."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Edukasi sederhana: catat 3 kategori aja — wajib, rumah, senang-senang. Plus trik "catat 5 detik setiap habis belanja".</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari lihat saldo, muka datar. Teks: "Tanggal 15."</li>
+        <li><b>4–11s</b> — VO: "Kami nggak boros. Kami cuma nggak nyatet."</li>
+        <li><b>11–20s</b> — Visual 3 kotak warna: Wajib (cicilan, listrik) · Rumah (belanja, dapur) · Senang (jajan, hobi).</li>
+        <li><b>20–28s</b> — Sari catat struk di HP 5 detik. Teks: "5 detik aja. Tiap kali belanja."</li>
+        <li><b>28–33s</b> — Cut to: akhir bulan masih ada sisa. Teks: "Rasanya kayak dapet bonus."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Meja + 3 kertas warna + HP. Simple, tanpa editing ribet.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Bukan harus jadi ahli keuangan. Cuma perlu tahu ke mana uangnya pergi. 💸</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Simpen, terus coba catat selama 7 hari mulai hari ini. Kabarin hasilnya ya!</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) 3 kategori dijelasin cepat · 2) Poll "Pernah nanya ke pasangan 'ini uangnya ke mana?'" · 3) Tips 5 detik · 4) "Bisa cek bareng pasangan besok 😉"
+    </div>
+  </div>
+
+  <!-- HARI 14 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 14</span>
+      <span class="daytitle">Minggu Ke-2: Rumah Kami Mulai Adem</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Hari ke-14. Ada satu hal yang berubah, dan nggak ada yang ngomong soal itu."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Before/after lembut: bandingin klip Hari 1 (chaos) vs hari ini (jalan tanpa panik). Ditutup teaser minggu 3.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Split screen: kiri klip Hari 1 (Bima nangis), kanan klip hari ini (Bima naruh sepatu sendiri).</li>
+        <li><b>5–12s</b> — Sari to-camera: "Kami nggak jadi keluarga sempurna. Masih berantakan kok."</li>
+        <li><b>12–20s</b> — "Yang berubah: nggak ada lagi satu orang yang harus inget semuanya."</li>
+        <li><b>20–26s</b> — Shot semua duduk santai, Ardan ngecek HP, Kayla nunjukin reward chart.</li>
+        <li><b>26–30s</b> — Teks: "Minggu 3: kami bakal diuji." (teaser)</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kompilasi klip lama (manfaatkan footage batch), color grading hangat.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Perubahan paling besar bukan rumah jadi rapi. Tapi kepala kami jadi lebih ringan. 🤍</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "MINGGU 3" kalau mau lanjut ikutin ceritanya.</p></div>
+    <div class="subblock"><span class="lbl">Feed 6 · Carousel Q&amp;A</span>
+      <h4>Jawaban Buat Pertanyaan Kalian</h4>
+      Slide 2–5: screenshot pertanyaan follower (buat sendiri kalau belum ada) + jawaban jujur · slide terakhir: "Minggu depan kami bakal cerita momen tersulit."<br>
+      <b>Caption:</b> Makasih buat semua yang nanya. Ini jawabannya. 🙏<br>
+      <b>CTA:</b> Nanya lagi di komen ya, gue jawab di carousel minggu depan.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      Q&amp;A sticker · jawab 3 pertanyaan · poll "lanjut?" · BTS · teaser minggu 3.
+    </div>
+  </div>
+
+  <!-- ========== MINGGU 3 ========== -->
+  <div class="week">
+    <div class="wlabel">Minggu 3 · Hari 15–21</div>
+    <h2>Saat Rumah Diuji</h2>
+    <p>Tujuan: masuk ke emosi yang lebih dalam — momen-momen yang bikin orang share ke pasangan &amp; temannya.</p>
+  </div>
+
+  <!-- HARI 15 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 15</span>
+      <span class="daytitle">Jam 2 Pagi</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Anak sakit jam 2 pagi. Yang paling capek bukan yang jaga, tapi yang nggak tahu apa-apa."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Bima demam. Sari bangun, cek suhu, kasih obat, lalu ketuk pintu kamar — Ardan kerja besok. Momen hening yang bikin berat, sampai Ardan bangun sendiri.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Gelap, jam dinding, suara Bima nangis lemah.</li>
+        <li><b>4–11s</b> — Sari bangun, pegang dahi Bima. VO: "39 derajat."</li>
+        <li><b>11–18s</b> — Sari duduk di samping, kompres, lihat pintu kamar. Diem lama.</li>
+        <li><b>18–24s</b> — Pintu kebuka — Ardan bangun sendiri: "Kenapa? Aku jaga, kamu istirahat."</li>
+        <li><b>24–30s</b> — Teks: "Dulu aku nggak pernah minta. Sekarang aku minta."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Cuma lampu kecil + flash HP low, 1 kamar, dialog natural, editing minim, musik piano tipis.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Kadang yang paling berat bukan ngerjain semuanya sendiri. Tapi ngerasa harus bisa ngerjain semuanya sendiri. 😔</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Kalau lu pernah di posisi ini, komen "🤍" aja. Gue baca semuanya.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Quote "minta tolong itu bukan lemah" · 2) Question sticker "kapan terakhir lu minta tolong?" · 3) BTS malam · 4) Tips: bikin info penting bisa diakses pasangan.
+    </div>
+  </div>
+
+  <!-- HARI 16 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 16</span>
+      <span class="daytitle">Ngobrol Uang Sama Pasangan Tanpa Berantem</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Ribut soal uang biasanya bukan soal jumlahnya. Tapi soal nggak ada yang tahu angkanya."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>3 aturan: ngobrol 15 menit tanggal 1 · lihat data bareng (bukan saling nuduh) · sepakati 1 keputusan kecil.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Hook to-camera.</li>
+        <li><b>4–12s</b> — Aturan 1: jadwal ngobrol rutin (visual: tanggal 1 di kalender dikasih lingkaran).</li>
+        <li><b>12–20s</b> — Aturan 2: lihat catatan bareng, bahasa netral (visual: tunjukin layar, dua orang lihat).</li>
+        <li><b>20–27s</b> — Aturan 3: sepakati 1 hal aja (visual: "bulan ini hemat jajan kopi").</li>
+        <li><b>27–32s</b> — Closing: "Yang penting bukan uangnya berapa. Tapi dua-duanya tahu."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Meja makan, 2 orang, pace santai, subtitle besar.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Ngobrol uang tuh bukan tanda nggak percaya. Justru tanda satu tim. 💪</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Simpen, terus jadwalin tanggal 1 buat ngobrol 15 menit.</p></div>
+    <div class="subblock"><span class="lbl">Feed 7 · Single infografis</span>
+      <h4>3 Aturan Ngobrol Uang Sama Pasangan</h4>
+      Bonus: 3 kalimat yang bikin obrolan aman — "aku cuma mau tahu" · "kita lihat bareng" · "ini bukan salah siapa-siapa".<br>
+      <b>Caption:</b> Buat yang selalu berantem tiap bahas uang: ini bukan soal uangnya.<br>
+      <b>CTA:</b> Share ke pasangan lu, tapi pelan-pelan 😌
+    </div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Screenshot infografis · 2) Poll "Ngobrol uang di rumah lu: lancar / sensitif" · 3) Quiz "tanggal 1 tanggal 30?" · 4) Repost komentar.
+    </div>
+  </div>
+
+  <!-- HARI 17 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 17</span>
+      <span class="daytitle">Ibu Kerja: "Aku Baik-Baik Aja"</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Kalimat paling sering diucapkan ibu, dan paling sering bohong."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sari ketik "aku baik-baik aja" ke chat keluarga — sementara visualnya dia kewalahan. Ditutup: Ardan ambil alih bagiannya tanpa harus diminta.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari ketik: "baik-baik aja kok" → SEND.</li>
+        <li><b>4–10s</b> — Cut: laptop nyala, HP bunyi, anak masuk nanya PR, dapur masih ada cucian.</li>
+        <li><b>10–17s</b> — Sari senyum ke arah anak: "Bentar ya, Mama selesai ini dulu."</li>
+        <li><b>17–23s</b> — Duduk sendirian, tarik napas panjang. VO: "Tapi sebenarnya, aku capek."</li>
+        <li><b>23–29s</b> — Cut ke malam: Ardan ambil alih beberapa tugas. Teks: "Dia nggak nanya. Dia lihat catatan, terus ambil bagiannya."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 meja, angle statis + b-roll, ending hangat. Jangan dramatis berlebihan.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Buat semua ibu yang hobinya bilang "baik-baik aja": nggak apa-apa kok kalau lagi nggak baik. 🤍</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tag ibu lu di komen. Sekalian tanya kabarnya beneran.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Quote buat ibu · 2) Question sticker "kalimat lu buat ibu hari ini" · 3) BTS · 4) Teaser besok (episode bikin nangis).
+    </div>
+  </div>
+
+  <!-- HARI 18 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 18</span>
+      <span class="daytitle">Yang Anak Bilang Waktu Nggak Diminta</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Gue nanya satu pertanyaan ke anak gue, dan jawabannya bikin gue diem lama."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sari nanya ke Kayla &amp; Bima: "Apa yang bikin rumah ini paling nyaman?" Jawaban anak polos dan menyentil. Ditutup dengan kebiasaan keranjang HP di meja.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari: "Kalau boleh minta satu hal dari rumah ini, apa?"</li>
+        <li><b>4–10s</b> — Bima: "Mama jangan main HP pas aku cerita."</li>
+        <li><b>10–16s</b> — Kayla: "Papa jangan bilang 'nanti' terus."</li>
+        <li><b>16–22s</b> — Sari diem, layar freeze. Teks: "Anak nggak butuh rumah yang rapi. Butuh orang yang hadir."</li>
+        <li><b>22–28s</b> — Shot malam: semua HP ditaruh di satu keranjang di tengah meja.</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Ruang keluarga, kamera sejajar mata anak, nuansa sore. Ending shot keranjang HP jadi "hero image" brand.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Diem-diem anak nyatet semua. Termasuk yang kita pikir nggak mereka lihat. 🥲</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "keranjang HP" kalau lu mau cobain kebiasaan ini mulai malam ini.</p></div>
+    <div class="subblock"><span class="lbl">Feed 8 · Carousel</span>
+      <h4>5 Momen Keluarga yang Nggak Bisa Diulang</h4>
+      Pentas sekolah · momen anak bilang lucu · makan bareng · umur anak nambah · momen "mama ajarin aku". Slide akhir: "Yang bikin kami mulai nyatet hal-hal kecil."<br>
+      <b>Caption:</b> Momen nggak nunggu kita siap. Makanya kami mulai catat. 📸<br>
+      <b>CTA:</b> Simpen + tulis di komen: momen apa yang lu paling nggak mau lupa?
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      1) Carousel preview · 2) Poll "HP ditaruh di keranjang: bisa / nggak bisa" · 3) Video anak jawab pertanyaan · 4) Question sticker "anak lu pernah bilang apa yang bikin nyesek?" · 5) Repost.
+    </div>
+  </div>
+
+  <!-- HARI 19 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 19</span>
+      <span class="daytitle">Semua Minta Sesuatu di Waktu yang Sama</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Jam 8 malam. Semua orang butuh kamu. Sekaligus."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Komedi chaos: 4 orang dateng ke Sari barengan, masing-masing bawa 1 masalah. Ditutup dengan pembagian peran.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari duduk mau istirahat. Pintu kebuka, 4 orang masuk bertumpuk.</li>
+        <li><b>4–10s</b> — Bima: "Mama, susu." Kayla: "Mama, tanda tangan." Mbah: "Le, obat." Ardan: "Ini kenapa ya?"</li>
+        <li><b>10–17s</b> — Sari freeze. Teks: "Sistem crash."</li>
+        <li><b>17–23s</b> — Cut: Ardan ambil alih urusan anak, Mbah urus dirinya sendiri, Kayla cari sendiri.</li>
+        <li><b>23–28s</b> — Sari duduk, napas. Teks: "Bukan nyuruh semuanya sendiri. Cuma nutup pintu 10 menit."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 kamera fix di sofa, koreografi komedi ala "chaos stacking", musik komedi ceria.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Mama bukan mesin. Mama juga butuh 10 menit nutup pintu. 😮‍💨</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tag mama/mbak/pasangan lu yang selalu jadi "pusat informasi rumah" 😂</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Poll "Jam berapa rumah lu paling chaos?" · 2) Quote "10 menit nutup pintu" · 3) BTS · 4) "Besok: cara minta tolong".
+    </div>
+  </div>
+
+  <!-- HARI 20 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 20</span>
+      <span class="daytitle">Drama Grup Keluarga</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"'Kok aku nggak dikasih tau?' — kalimat yang selalu muncul setelah semuanya udah kejadian."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sketsa grup chat keluarga: info penting disebar lewat jalur yang salah, diselesaikan dengan satu tempat untuk semua info.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Screen record HP: chat "Besok ke rumah Oma ya" dikirim ke grup "Resep &amp; Jajan" (grup salah).</li>
+        <li><b>4–11s</b> — Ardan dateng, rumah gelap, Oma udah masak dan kecewa.</li>
+        <li><b>11–18s</b> — Mbah Uti: "Makanya kalau ada acara, jangan cuma di grup sebelah."</li>
+        <li><b>18–24s</b> — Sari bikin catatan acara, semua bisa lihat, ada reminder.</li>
+        <li><b>24–28s</b> — Teks: "Satu info. Satu tempat. Semua tahu."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Screen recording HP (mudah banget dibuat) + cut ke adegan rumah.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Berapa grup WA yang isinya info penting di HP lu sekarang? 😅</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen jumlah grup WA keluarga lu. Gue tunggu yang jawab 7 ke atas 😂</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Screenshot grup lucu · 2) Poll "Info keluarga paling sering ilang di mana?" · 3) Tips: bikin satu sumber info · 4) Repost jawaban.
+    </div>
+  </div>
+
+  <!-- HARI 21 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 21</span>
+      <span class="daytitle">Belajar Minta Tolong</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Hal tersulit yang gue pelajari tahun ini bukan soal kerja. Tapi bilang: 'aku butuh bantuan'."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Refleksi: Sari belajar delegasi tugas ke Ardan &amp; anak. Ditutup recap minggu 3 + teaser minggu terakhir.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Hook to-camera, tone pelan.</li>
+        <li><b>5–12s</b> — Visual flashback klip minggu 3 (anak sakit, malam, capek).</li>
+        <li><b>12–19s</b> — Sari: "Selama ini gue pikir minta tolong itu tanda gagal. Ternyata tanda rumahnya sehat."</li>
+        <li><b>19–26s</b> — Shot: Sari nunjukin tugas ke Ardan &amp; Kayla, mereka ngangguk, langsung gerak.</li>
+        <li><b>26–31s</b> — Teks: "Minggu 4: kami benerin rumah ini. Nggak rapi sempurna, tapi lebih ringan."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Mix to-camera + kompilasi. Musik akustik naik di akhir.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Minggu ke-3 ngajarin kami: rumah kuat bukan yang nggak pernah capek, tapi yang bisa saling nolong. 🤝</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen satu hal yang mau lu delegasikan minggu ini. Biar gue semangatin.</p></div>
+    <div class="subblock"><span class="lbl">Feed 9 · Carousel recap</span>
+      <h4>Recap Minggu 3: Yang Berubah di Kepala Kami</h4>
+      5 slide pelajaran · slide terakhir teaser "Minggu terakhir: kami bikin sistem rumah".<br>
+      <b>Caption:</b> Minggu tersulit jadi minggu paling berkesan. 🥲<br>
+      <b>CTA:</b> Simpen dan share kalau ini relate sama rumah lu.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      Recap · quiz episode favorit minggu 3 · poll "lanjut minggu terakhir?" · BTS · question sticker.
+    </div>
+  </div>
+
+  <!-- ========== MINGGU 4 ========== -->
+  <div class="week">
+    <div class="wlabel">Minggu 4 · Hari 22–30</div>
+    <h2>Rumah yang Lebih Ringan</h2>
+    <p>Tujuan: resolusi cerita, kebiasaan baru yang bisa ditiru, plus perkenalan SeAtap secara natural di akhir season.</p>
+  </div>
+
+  <!-- HARI 22 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 22</span>
+      <span class="daytitle">5 Menit Tiap Malam yang Mengubah Rumah Kami</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Kami nggak pindah rumah, nggak nambah ART. Cuma nambah 5 menit."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Ritual 5 menit: cek agenda besok, tutup hari, dan bilang satu hal yang bikin bersyukur.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Hook to-camera, teks "5 menit".</li>
+        <li><b>4–12s</b> — Visual: keluarga duduk, Sari nunjukin layar (agenda besok).</li>
+        <li><b>12–20s</b> — Visual: anak nyebut 1 hal hari ini yang lucu, semua ketawa.</li>
+        <li><b>20–27s</b> — Visual: semua tidur tanpa drama → teks "oke, hampir nggak drama 😄".</li>
+        <li><b>27–32s</b> — Teks akhir: "5 menit tiap malam &gt; 1 jam tiap bulan pas udah berantakan."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> 1 ruang keluarga, lampu hangat, angle medium. Bisa batch 3 video sekaligus.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Kelihatan sepele, tapi ini yang paling ngefek. Coba seminggu. 🌙</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Simpen, komen "MULAI" kalau lu mau coba malam ini.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Checklist 5 menit · 2) Poll "malam di rumah lu: santai / masih chaos" · 3) BTS · 4) Countdown hari 22.
+    </div>
+  </div>
+
+  <!-- HARI 23 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 23</span>
+      <span class="daytitle">Bima Umur 4 Tahun Punya Tanggung Jawab</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Edukasi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Anak umur 4 tahun nggak bisa nyuci. Tapi bisa bikin rumah lebih ringan."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Bima punya 3 tugas: sepatu ke rak, botol minum ke wastafel, baju kotor ke keranjang. Ibunya nggak perlu ngingetin lagi.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Bima to-camera: "Aku punya 3 kerjaan."</li>
+        <li><b>4–10s</b> — Montage cepat: sepatu → rak · botol → wastafel · baju → keranjang.</li>
+        <li><b>10–17s</b> — Sari di belakang: "Dulu aku yang ngerjain semua ini."</li>
+        <li><b>17–24s</b> — Cut to Bima nunjukin jadwalnya sendiri (gambar, ada stiker).</li>
+        <li><b>24–28s</b> — Teks: "Anak nggak terlalu kecil buat bantu. Cuma perlu aturannya jelas."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kamera dari ketinggian badan anak, warna cerah, musik playful. Tugas ringan saja, selalu diawasi.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Capek itu seringkali datang dari hal-hal kecil yang nggak ada yang ngerjain. 🧺</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen umur anak lu, nanti gue kasih ide 3 tugas pertamanya.</p></div>
+    <div class="subblock"><span class="lbl">Feed 10 · Single infografis</span>
+      <h4>5 Kebiasaan Kecil yang Bikin Rumah Lebih Ringan</h4>
+      1) Tugas dibagi &amp; kelihatan · 2) Barang punya "rumah" · 3) Catat pengeluaran · 4) 5 menit tiap malam · 5) Satu tempat buat semua info.<br>
+      <b>Caption:</b> Nggak ada yang instan. Semua mulai dari hal kecil yang diulang.<br>
+      <b>CTA:</b> Simpen &amp; pilih satu yang mau lu mulai minggu ini. Komentarin nomornya.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Infografis · 2) Poll "kebiasaan mana yang mau lu coba" · 3) Video Bima kerja · 4) Repost.
+    </div>
+  </div>
+
+  <!-- HARI 24 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 24</span>
+      <span class="daytitle">Cek Rumah Sebentar</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Soft Product</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Gue cek rumah pakai HP. Bukan buat belanja, tapi buat tahu stok kita masih cukup apa nggak."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sari nunjukin rutinitasnya: cek daftar belanja, cek tugas, cek jadwal — semua dalam satu layar. Natural banget, tanpa menyebut fitur atau nama aplikasi.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Sari duduk di dapur, buka HP. Teks: "Cek rumah, 30 detik."</li>
+        <li><b>4–12s</b> — Close-up layar: daftar belanja bulan ini, item yang udah kebeli dicentang.</li>
+        <li><b>12–20s</b> — Slide ke daftar tugas: siapa ngerjain apa hari ini.</li>
+        <li><b>20–27s</b> — Slide ke jadwal: pentas Kayla minggu depan, waktunya keinget.</li>
+        <li><b>27–32s</b> — Sari to-camera: "Dulu semua ini ada di kepala gue. Sekarang ada di sini." (tanpa nyebut nama app)</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Screen recording asli (tanpa data pribadi), tangan Sari, cahaya alami. Pacing tenang, bukan hard-sell.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Gue nggak butuh aplikasi yang ribet. Cukup yang bikin gue nggak harus inget semuanya. 📱</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Kalau lu penasaran ini app apa, komen "APA" — gue jawab di pinned comment.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Close-up 1 fitur · 2) Poll "yang paling ngebantu lu yang mana?" · 3) Link in bio teaser · 4) FAQ singkat jawab "ini app apa?"
+    </div>
+  </div>
+
+  <!-- HARI 25 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 25</span>
+      <span class="daytitle">Hari Ke-25: Yang Berubah dari Kami</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Kami nggak jadi keluarga yang rapi. Tapi ada 3 hal yang berubah."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Before/after personal: (1) nggak ada lagi satu orang jadi penanggung jawab hidup, (2) nggak ada lagi "kok nggak dikasih tau", (3) malam jadi lebih tenang.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Split screen: klip Hari 1 vs Hari 25.</li>
+        <li><b>5–12s</b> — Poin 1: Sari to-camera "Gue nggak jadi pusat informasi rumah lagi."</li>
+        <li><b>12–19s</b> — Poin 2: Ardan: "Aku tau jadwal anak sendiri sekarang." (tunjukin layar)</li>
+        <li><b>19–25s</b> — Poin 3: night shot hangat, nggak ada yang panik.</li>
+        <li><b>25–30s</b> — Teks: "5 hari lagi. Ada satu episode penutup."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kompilasi footage lama + rekaman baru. Cukup pakai CapCut, transisi simple.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Perubahan nggak harus besar. Kadang cuma: semuanya jadi tahu. 🤍</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen satu hal yang berubah di rumah lu 25 hari terakhir.</p></div>
+    <div class="subblock"><span class="lbl">Feed 11 · Carousel</span>
+      <h4>10 Hal yang Bisa Kamu Delegasikan Hari Ini</h4>
+      Tugas rumah · urusan sekolah · belanja · dokumen · tagihan · jadwal · dll + "cara mulai" di slide terakhir.<br>
+      <b>Caption:</b> Yang bikin capek bukan tugasnya. Tapi ngerasa cuma kamu yang bisa ngerjain.<br>
+      <b>CTA:</b> Komen nomor mana yang lu mau lepas minggu ini.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      Sebelum/sesudah · poll "rumah lu udah lebih ringan belum?" · Q&amp;A "cara ngajarin pasangan ngecek sendiri" · BTS · teaser.
+    </div>
+  </div>
+
+  <!-- HARI 26 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 26</span>
+      <span class="daytitle">Papa Masak Pertama Kali</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Ardan bilang: 'hari ini aku yang masak.' Kami semua berdoa."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Komedi hangat: Ardan masak, dapur kacau, tapi anak-anak bangga banget. Pesannya: yang penting ambil bagian.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Ardan pakai celemek, muka serius. Teks: "Mode chef aktif."</li>
+        <li><b>4–11s</b> — Dapur: mangkuk ketumpahan, bawang gosong, Sari diem di sudut nonton.</li>
+        <li><b>11–18s</b> — Bima: "Papa, ini apaan?" Ardan: "Ini... kreativitas."</li>
+        <li><b>18–25s</b> — Semua makan bareng, muka lucu tapi ngangguk-ngangguk sambil bilang "enak kok".</li>
+        <li><b>25–30s</b> — Teks: "Bukan masakannya yang penting. Yang penting dia ambil bagian."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Dapur, 1 kamera + beberapa cut cepat, musik komedi playful, ending shot keluarga tertawa.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Nggak masalah hasilnya begini. Yang penting bukan cuma satu orang di dapur terus. 🍳</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Tag pasangan lu + tulis "giliran lu, ya" 😆</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Foto hasil masakan · 2) Poll "enak atau pura-pura enak?" · 3) BTS dapur · 4) Repost.
+    </div>
+  </div>
+
+  <!-- HARI 27 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 27</span>
+      <span class="daytitle">Tamu Datang, Kami Nggak Diinfokan</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Relatable Chaos</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Skenario terburuk: bel pintu bunyi, dan di luar ada 6 orang keluarga."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sketsa panik: semua orang beres-beres 5 menit. Ditutup dengan kebiasaan: kalau ada acara, infonya masuk ke satu tempat.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–4s</b> — Bel bunyi. Sari freeze. Teks: "6 orang. Nggak ada info."</li>
+        <li><b>4–10s</b> — Fast montage: Kayla masukin baju ke kamar, Bima nyembunyiin mainan, Ardan lipat karpet.</li>
+        <li><b>10–16s</b> — Tamu masuk: "Wah, rapi banget!" Sari: "Iya, kebetulan aja." (muka tahu)</li>
+        <li><b>16–22s</b> — Cut ke: Sari bikin catatan "acara Minggu depan: keluarga Oma" — semua bisa lihat.</li>
+        <li><b>22–26s</b> — Teks: "Kaget tamu boleh. Kaget acara keluarga... jangan."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Ruang tamu, fast-cut komedi, sound effect "whoosh" + musik panik. Fun &amp; ringan.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Yang paling ngeselin bukan tamunya. Tapi rasa "kok gue nggak tau apa-apa". 😅</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen pengalaman paling absurd soal tamu mendadak.</p></div>
+    <div class="subblock"><span class="lbl">Stories (4 frame)</span>
+      1) Poll "rumah lu siap tamu mendadak?" · 2) BTS adegan 6 orang · 3) Tips info satu pintu · 4) Countdown 3 hari lagi.
+    </div>
+  </div>
+
+  <!-- HARI 28 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 28</span>
+      <span class="daytitle">Q&amp;A: Fitur Mana yang Paling Kepakai?</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-feed">Feed</span>
+      <span class="badge b-pillar">Soft Product</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Banyak yang nanya: 'itu aplikasi apa sih?' Oke, gue jawab sekarang."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Sari jawab 3 pertanyaan follower sambil nunjukin 3 hal secara natural: agenda keluarga, catatan belanja, pembagian tugas. Kalimat kunci: "Yang paling kepakai justru yang paling sederhana."</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Hook to-camera.</li>
+        <li><b>5–13s</b> — Q1 "Ini app apa?" → jawab singkat + close-up layar fitur agenda.</li>
+        <li><b>13–22s</b> — Q2 "Susah nggak pakainya?" → "nggak, malah Mbah Uti bisa" + visual Mbah Uti lihat layar.</li>
+        <li><b>22–30s</b> — Q3 "Bayar nggak?" → jawab jujur + sebut link di bio.</li>
+        <li><b>30–35s</b> — Teks: "Gue nggak jualan. Gue cuma cerita apa yang dipakai di rumah ini. Kalau cocok, ambil. Kalau nggak, nggak apa-apa."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Duduk di sofa, layar HP sebagai cutaway, subtitle besar. Jangan pakai template iklan.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Akhirnya gue jawab juga 😅 Aplikasinya namanya SeAtap — buat ngatur rumah dalam satu tempat. Cek link di bio kalau mau lihat.</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen pertanyaan lain, nanti gue jawab di Story.</p></div>
+    <div class="subblock"><span class="lbl">Feed 12 · Carousel</span>
+      <h4>6 Hal yang Bisa Kamu Atur di Satu Tempat</h4>
+      1 fitur/slide, ditulis sebagai "dipakai buat apa" (bukan jargon fitur) + screenshot asli.<br>
+      <b>Caption:</b> Ini yang dipakai di rumah kami tiap hari. Simpen kalau lu butuh yang kayak gini. 🏠<br>
+      <b>CTA:</b> Komen fitur mana yang paling lu butuh — gue jelasin lebih detail di DM/Story.
+    </div>
+    <div class="subblock"><span class="lbl">Stories (6 frame)</span>
+      Q&amp;A marathon · jawab 4 pertanyaan · demo 1 fitur · link sticker · poll "mau gue bahas lebih dalam?" · recap.
+    </div>
+  </div>
+
+  <!-- HARI 29 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 29</span>
+      <span class="daytitle">Satu Atap, Satu Tim</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Emosi</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"30 hari lalu, gue pikir masalah rumah ini adalah rumahnya. Ternyata bukan."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Refleksi hampir penutup: rumah masih rumah yang sama, tapi cara kami ngatur udah beda.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Hook to-camera.</li>
+        <li><b>5–13s</b> — Montase momen terbaik dari 28 hari sebelumnya (chaos → tenang).</li>
+        <li><b>13–20s</b> — Sari: "Rumah kami masih berantakan. Anak masih nangis. Gue masih capek."</li>
+        <li><b>20–26s</b> — "Bedanya: sekarang nggak ada yang harus nanggung semuanya sendiri."</li>
+        <li><b>26–30s</b> — Shot keluarga duduk berlima. Teks: "Satu atap, satu tim."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Kompilasi footage lama (hemat produksi!), color grading hangat, musik akustik.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Kalau rumah lu juga kayak gini — kacau tapi saling jaga — kita satu tim. 🤍</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Komen "SATU TIM" kalau lu ngerasa bagian dari ini.</p></div>
+    <div class="subblock"><span class="lbl">Stories (5 frame)</span>
+      1) Poll episode favorit · 2) Question sticker "apa yang paling nempel buat lu?" · 3) BTS · 4) Countdown episode penutup · 5) Repost.
+    </div>
+  </div>
+
+  <!-- HARI 30 -->
+  <div class="day">
+    <div class="dayhead">
+      <span class="daynum">HARI 30</span>
+      <span class="daytitle">Episode Penutup: Rumah yang Lebih Ringan</span>
+      <span class="badge b-reels">Reels</span>
+      <span class="badge b-pillar">Emosi + Soft Product</span>
+    </div>
+    <div class="field hook"><span class="lbl">Hook</span><div class="quote">"Hari ke-30. Kami nggak jadi keluarga sempurna. Dan itu bukan tujuannya."</div></div>
+    <div class="field"><span class="lbl">Isi Konten</span><p>Penutup season 1: recap perubahan + jujur soal peran SeAtap + ajakan tetap ikut season 2.</p></div>
+    <div class="script">
+      <span class="lbl">Script / Storyboard</span>
+      <ol>
+        <li><b>0–5s</b> — Hook to-camera di ruang keluarga, semua karakter ada di belakang.</li>
+        <li><b>5–14s</b> — "30 hari ini kami belajar: yang bikin rumah berat bukan jumlah pekerjaannya, tapi nggak ada yang tahu apa-apa selain satu orang."</li>
+        <li><b>14–23s</b> — Montase perubahan (before/after singkat) + shot layar HP beberapa kali dipakai.</li>
+        <li><b>23–31s</b> — "Alat kami sederhana. Sekarang semuanya ada di satu tempat — SeAtap. Tapi alat cuma alat. Yang bikin berubah, kebiasaannya."</li>
+        <li><b>31–38s</b> — Semua to-camera nyapa: "Season 2? Ada cerita baru: rumah baru, sekolah baru, dan... satu anggota baru." (cliffhanger)</li>
+        <li><b>38–42s</b> — Teks: "Follow biar nggak ketinggalan. Satu atap, satu tim."</li>
+      </ol>
+      <p style="margin:0"><b>Visual:</b> Rekaman baru (group shot) + kompilasi. Musik naik di akhir, freeze frame keluarga.</p>
+    </div>
+    <div class="field"><span class="lbl">Caption</span><div class="cap">Makasih udah nonton 30 hari rumah kacau kami. 🥹 Season 2 mulai minggu depan. Kalau lu mau rumah lu lebih ringan, mulai aja dari satu kebiasaan kecil. SeAtap cuma bantu — sisanya rumah lu sendiri yang ngerjain. 🤍</div></div>
+    <div class="field cta"><span class="lbl">CTA</span><p>Follow, aktifkan lonceng, dan komen: kebiasaan mana yang mau lu mulai minggu ini?</p></div>
+    <div class="subblock"><span class="lbl">Stories (6 frame)</span>
+      Countdown · recap 30 hari dalam 5 frame · Q&amp;A season 2 · link sticker SeAtap · thank-you note · teaser episode season 2 besok.
+    </div>
+  </div>
+
+  <!-- ================= BAGIAN 4 ================= -->
+  <h2 style="break-before:page;page-break-before:always;">4 · Tips Eksekusi Biar Realistis</h2>
+
+  <div class="tipbox">
+    <h3>Produksi</h3>
+    <ul style="margin-bottom:0">
+      <li><b>Batch filming 1×/minggu</b> — syuting 7 Reels sekaligus di 1 rumah, 1 set pemain, 3–4 jam. Hemat banget.</li>
+      <li><b>1 kamera HP + tripod + lampu jendela.</b> Jangan beli alat dulu.</li>
+      <li><b>Editing pakai CapCut</b> — bikin 3 template transisi + 1 template subtitle, pakai terus biar konsisten dan cepat.</li>
+      <li><b>Reuse footage:</b> klip Hari 1 dipakai lagi di Hari 7, 14, 25, 29, 30. Kerja lebih ringan, rasa "serial"-nya kebangun.</li>
+      <li><b>Screen recording HP</b> (Hari 20, 24, 28) — gratis, cepat, dan terasa autentik.</li>
+    </ul>
+  </div>
+
+  <div class="tipbox">
+    <h3>Bahasa &amp; Tone</h3>
+    <ul style="margin-bottom:0">
+      <li>Kalimat pendek, hindari jargon fitur.</li>
+      <li>Sebut "SeAtap" maksimal <b>3–4× dalam 30 hari</b>.</li>
+      <li>Lebih baik orang nanya "ini app apa?" daripada kita yang ngomong duluan.</li>
+    </ul>
+  </div>
+
+  <div class="tipbox">
+    <h3>Engagement</h3>
+    <ul style="margin-bottom:0">
+      <li>Balas <b>semua komentar di 60 menit pertama</b> tiap upload — penting untuk reach.</li>
+      <li><b>Pin komentar</b> yang isinya pertanyaan soal SeAtap → jadi soft CTA alami.</li>
+      <li>Save &amp; repost Story dari follower (UGC) minimal 3×/minggu.</li>
+    </ul>
+  </div>
+
+  <div class="tipbox">
+    <h3>Checkpoint Evaluasi</h3>
+    <ul style="margin-bottom:0">
+      <li><b>Hari 7:</b> lihat 3 Reels dengan views tertinggi → gandakan gaya itu di minggu 2.</li>
+      <li><b>Hari 14:</b> cek jumlah <i>saves</i> → kalau feed edukasi tinggi, tambah porsi edukasi.</li>
+      <li><b>Hari 21:</b> cek follower baru &amp; komentar → lihat pilar mana yang paling ngefek.</li>
+      <li><b>Hari 30:</b> recap, cek konversi ke link bio, dan rencanain season 2.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p><b>SeAtap — Kampanye Konten 30 Hari</b> · Niche: Keluarga · Pendekatan Soft Selling<br>
+    Dokumen ini dibuat sebagai panduan produksi. Semua nama, karakter, dan cerita bersifat fiktif contoh.</p>
+  </div>
+
+</div>
+</body>
+</html>

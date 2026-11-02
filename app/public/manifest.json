@@ -1,0 +1,11 @@
+{
+  "name": "SeAtap",
+  "short_name": "SeAtap",
+  "description": "Rumah nggak harus rapi. Yang penting semua tahu.",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "lang": "id",
+  "icons": []
+}

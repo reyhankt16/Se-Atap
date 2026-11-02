@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/*
+ * SATU FILE TAMPILAN — ubah warna, font, ukuran, jarak, dan sudut di sini saja.
+ * Tutorial: lihat CARA-UBAH-TAMPILAN.md di root project.
+ */
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #171717;
+  --color-primary: #2563eb;
+  --color-primary-fg: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f8fafc;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --text-base: 16px; /* R2: minimal 16px biar kebaca tanpa kacamata */
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+
+  --space-unit: 0.5rem;
+  --radius: 0.75rem;
+  --tap-min: 44px; /* L7-2: target tap minimal 44px */
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-fg);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-fg);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-surface: var(--color-surface);
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+  --font-sans: var(--font-sans);
+  --radius-card: var(--radius);
+}
+
+html {
+  font-size: var(--text-base);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+/* R2: target tap konsisten minimal 44px di semua tombol/link utama */
+button,
+a.tap-target {
+  min-height: var(--tap-min);
+}

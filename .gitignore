@@ -1,0 +1,7 @@
+# Rahasia — jangan pernah di-commit
+Pasword database supabase.txt
+*.env
+.env*
+
+# File sumber PRD (PDF besar, bukan kode) tetep boleh ke-commit kalau mau;
+# yang di-exclude cuma file kredensial di atas.
